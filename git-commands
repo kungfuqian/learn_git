@@ -1,0 +1,13 @@
+# this is a learning session about git
+
+git init 
+
+git add 
+
+git commit
+
+git remote rm origin 
+
+git remote add origin https://username:password@github.com/username/test.git
+
+git push origin master
