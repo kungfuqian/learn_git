@@ -56,6 +56,18 @@ git show [commit]
 git log --oneline 
 # review all previous committed versions
 
+git reflog
+# review all steps' changes in version
+
+git reset [<commit describe>]
+# The <--hard> usage, back to previous versions
+git reset --hard HEAD [<hard number>] 
+git reset --hard HEAD^^	
+git reset --hard HEAD~2
+
+git reflog
+# review all steps' changes in version
+
 
 ##### synchronize changes #####
 
