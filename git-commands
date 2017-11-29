@@ -72,3 +72,55 @@ git push origin master
 
 ### base command end ###
 
+
+### Adding a new SSH key to your Github account
+##### learn from https://help.github.com/articles/connecting-to-github-with-ssh/ #####
+
+# checked for existing SSH keys 
+ls -al ~/.ssh
+# Lists the files in your .ssh directory, if they exist
+By default, the filenames of the public keys are one of the following:
+
+    id_dsa.pub
+    id_ecdsa.pub
+    id_ed25519.pub
+    id_rsa.pub
+
+# Generating a new SSH key and adding it to the ssh-agent
+ssh-keygen -t rsa -b 4096 -C "freedanfan@gmail.com"
+# When you're prompted to "Enter a file in which to save the key," press Enter. This accepts the default file location.
+/home/qian/.ssh/id_rsa  
+# At the prompt, type a secure passphrase. For more information, see "Working with SSH key passphrases". 
+passphrase:kiankun520
+
+The key fingerprint is:
+SHA256:80laqnqxcLkwXGva/R3OMSfvABmtYUg38OkTfDdf8eo freedanfan@gmail.com
+
+# open resource file 
+nautilus ~/.ssh
+
+# open the file in your favorite text editor, and copy it to your clipboard.
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDojSOskd1Ld7A6zP4PDW601NACDQtzuFQkv3C9wuqoStCVIGYsgni5vX6R62F7BpzggTN0y7n93GVYXPQGxpyHjaXKX9ZxkyEu+je2iRCAHb9lAU16FgIG2X140CR8fp0j7xexvmyr9Tk2TtGs7xs5MfV/FPDsJ5Itc72VtwnAARLd6i9YryjSL3I5Mizvec3b4X/xrsg4Et67ta4rBexAZ8vlBnXkWMu9/z4P9q9E4BghJB0MQYcJXpO64pLIcF0bbKm8lehyNjTKtUaK7hh/nwYNsOlGoi90YC67DCT/fR0CWyXU4ffJ0t2tAFWXn/zW9+Jq6dw+7FlyDfnYCa4BHJWYl83MNkbwBc2ZK4ExGFFp43fjx61CwGLwYLWui4R+Dm6giuFtG4WnNEuvrqAkeU14sq+/8G6ebX6Q6Di94lz/avN7FJLCJjPWuLVhVmHrRtp0ZicU7xiRFzX1r9+d9KkLi+e33kuDHXn86w6LnTZ96WP1JRKi1jHLUmjU9tDYROxnZtNl34/u5E7+6kOzvYrWwpFeK9N76ndzOcz2ZjvG9bYeMhF3qro6jiEy9QXEAtorWck6aoxpE4NOqpBGCWOnw1i3USf/xLEmQbIwW/gBf2jfVeZjrSP0x9de5fMaxhEvTb85IMZp29PKabqrR4V2RMno4lr738My+cajlQ== freedanfan@gmail.com
+
+# In the upper-right corner of any page, click your profile photo, then click Settings. 
+
+# In the user settings sidebar, click SSH and GPG keys. 
+
+# Click New SSH key or Add SSH key. 
+# add a descriptive label for the new key,paste your key into the "key"field.
+# Click Add SSH key. 
+# If prompted, confirm your GitHub password. 
+
+### Testing your SSH connection
+
+# login github
+ssh -T git@github.com
+# and enter the passward: kiankun520
+
+### Working with SSH key passphrases
+
+# Adding or changing a passphrase
+ssh-keygen -p
+#start the SSH key creation process
+
