@@ -65,8 +65,8 @@ git reset --hard HEAD [<hard number>]
 git reset --hard HEAD^^	
 git reset --hard HEAD~2
 
-git reflog
-# review all steps' changes in version
+git checkout [<hard number>] -- [<commit describe>]
+# example git checkout c6762a1 -- 1.py
 
 
 ##### synchronize changes #####
@@ -78,10 +78,17 @@ git remote
 git remote remove [name]
 # Removes the remote named <name>. All remote-tracking branches and configuration settings for the remote are removed.
 
+# https 
 git remote add origin https://username:password@github.com/username/test.git
+git 
+
+# SSH
+git remote add origin git@github.com:kungfuqian/learn_git.git
 
 git push [alias] [branch] 
 # Uploads all local branch commits to Github
+git push -u origin master
+
 
 git pull 
 # Downloads bookmark history and incorporates changes
