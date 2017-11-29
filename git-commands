@@ -52,18 +52,21 @@ git show [commit]
 
 ##### synchronize changes #####
 
+
+git remote 
+# Manage set of tracked repositories
+
+git remote remove [name]
+# Removes the remote named <name>. All remote-tracking branches and configuration settings for the remote are removed.
+
+git remote add origin https://username:password@github.com/username/test.git
+
 git push [alias] [branch] 
 # Uploads all local branch commits to Github
 
 git pull 
 # Downloads bookmark history and incorporates changes
 
-git remote 
-# Manage set of tracked repositories
-
-git remote rm origin 
-
-git remote add origin https://username:password@github.com/username/test.git
 
 git push origin master
 
