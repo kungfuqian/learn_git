@@ -50,6 +50,13 @@ git diff [first-branch]...[second-branch]
 git show [commit]
 # Outputs metadata and content changes of the specified commit
 
+
+### back to previous version ###
+
+git log --oneline 
+# review all previous committed versions
+
+
 ##### synchronize changes #####
 
 
