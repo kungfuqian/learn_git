@@ -1,13 +1,71 @@
-# this is a learning session about git
+# set up Git
 
-git init 
+Quick reference guides: https://git-scm.com/docs
 
-git add 
+### base command ###
 
-git commit
+##### configure tooling #####
+
+git config --global user.name "[name]"  
+# Sets the name you want attached to your commit transactions
+
+git config --global user.email "[email address]"
+# sets the email you want attached to your comit transactions
+
+##### create repositories #####
+
+git init [project-name]  
+# Create an empty Git repository or reinitialize an existing one
+
+git clone [url]
+# Downloads a project and its entire version history
+
+##### make changes #####
+git status 
+# Lists all new or modified files to be committed 
+
+git diff
+# Shows file differences not yet staged
+
+git add [file]
+# Snapshots the file in preparation for versioning
+
+git diff --staged 
+# Shows file differences between staging and the last file version
+
+git commit -m "[descriptive message]" 
+# Records file snapshots permanently in version history
+
+##### review history #####
+
+git log 
+# Lists version history for the current branch 
+
+git log --follow [file]
+# Lists version history for a file, including renames
+
+git diff [first-branch]...[second-branch]
+# Shows content differences between two branches
+
+git show [commit]
+# Outputs metadata and content changes of the specified commit
+
+##### synchronize changes #####
+
+git push [alias] [branch] 
+# Uploads all local branch commits to Github
+
+git pull 
+# Downloads bookmark history and incorporates changes
+
+git remote 
+# Manage set of tracked repositories
 
 git remote rm origin 
 
 git remote add origin https://username:password@github.com/username/test.git
 
 git push origin master
+
+### base command end ###
+
